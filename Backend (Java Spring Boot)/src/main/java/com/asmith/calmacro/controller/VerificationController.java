@@ -38,13 +38,13 @@ public class VerificationController {
             userService.verifyUser(token);
             // Redirect to the verify-email page with a success message
             return ResponseEntity
-                    .status(HttpStatus.FOUND) // HTTP 302 redirect
+                    .status(HttpStatus.FOUND) 
                     .location(URI.create("https://andrewsmithdevelopment.com/verify-email?status=verified")) // Success
                     .build();
         } catch (IllegalArgumentException e) {
             // Redirect to the verify-email page with an error message
             return ResponseEntity
-                    .status(HttpStatus.FOUND) // HTTP 302 redirect
+                    .status(HttpStatus.FOUND)
                     .location(URI.create("https://andrewsmithdevelopment.com/verify-email?status=failed&error=" + URLEncoder.encode(e.getMessage(), StandardCharsets.UTF_8))) // Failure
                     .build();
         }

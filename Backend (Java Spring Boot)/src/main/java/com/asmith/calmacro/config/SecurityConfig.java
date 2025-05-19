@@ -1,7 +1,7 @@
 package com.asmith.calmacro.config;
 
 import com.asmith.calmacro.security.JwtFilter;
-import com.asmith.calmacro.security.CustomAuthenticationEntryPoint; // Ensure this import exists
+import com.asmith.calmacro.security.CustomAuthenticationEntryPoint; 
 import com.asmith.calmacro.service.CustomUserDetailsService;
 
 import org.springframework.beans.factory.annotation.Autowired;

@@ -29,8 +29,7 @@ public class AuthController {
     @Autowired
     private JwtUtil jwtUtil;
     
-    /* Validates the currently provided JWT token to check if the user is still authenticated.
-     * This method can be used to keep the user logged in or force a logout if the token is invalid. */
+    // Validates the currently provided JWT token to check if the user is still authenticated
     @PostMapping("/validate-token")
     public ResponseEntity<?> validateToken() {
         try {
@@ -56,8 +55,7 @@ public class AuthController {
         }
     }
 
-    /* Refreshes the access token using a valid refresh token. This allows the user to stay logged in
-     * without having to re-authenticate using their credentials. */
+    // Refreshes the access token using a valid refresh token
     @PostMapping("/refresh")
     public ResponseEntity<?> refreshAccessToken(@RequestBody Map<String, String> tokenRequest) {
         String refreshToken = tokenRequest.get("refreshToken");

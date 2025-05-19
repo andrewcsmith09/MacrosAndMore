@@ -41,9 +41,11 @@ public class FoodLogController {
     @PostMapping("/log")
     public ResponseEntity<FoodLog> logFood(@RequestBody FoodLogDTO foodLogDTO) {
 
+        // Fetch the user using user's ID
         User user = userService.getUserById(foodLogDTO.getUserId())
                 .orElseThrow(() -> new IllegalArgumentException("User not found"));
 
+        // Log the food entry and return the saved FoodLog
         FoodLog savedFoodLog = foodLogService.logFood(
                 foodLogDTO.getFoodItemId(),
                 foodLogDTO.getRecipeId(),
@@ -71,11 +73,14 @@ public class FoodLogController {
     @PutMapping("/{foodLogId}/water")
     public ResponseEntity<?> updateWaterAmount(@PathVariable Long foodLogId, @RequestBody BigDecimal newWaterAmount) {
         try {
+            // Update water intake and return the updated FoodLog
             var updatedFoodLog = foodLogService.updateWaterAmount(foodLogId, newWaterAmount);
             return ResponseEntity.ok(updatedFoodLog);
         } catch (EntityNotFoundException e) {
+            // Return 404 if the FoodLog entry is not found
             return ResponseEntity.notFound().build();
         } catch (Exception e) {
+            // Return 500 if any other error occurs during the update
             return ResponseEntity.status(500).body("An error occurred while updating the water amount.");
         }
     }

@@ -42,13 +42,16 @@ public class RecipeController {
     // Updates an existing recipe with the provided details
     @PutMapping("/{id}")
     public ResponseEntity<Recipe> updateRecipe(@PathVariable Long id, @RequestBody RecipeDTO recipeDTO) {
+        // Retrieve recipe by it's ID
         Recipe existingRecipe = recipeService.findById(id);   
 
+        // Update with provided details
         existingRecipe.setRecipeName(recipeDTO.getRecipeName());
         existingRecipe.setDirection(recipeDTO.getDirection());
         existingRecipe.setServingSize(recipeDTO.getServingSize());
         existingRecipe.setState(recipeDTO.getState());
         
+        // Save and return updated recipe
         recipeService.save(existingRecipe);
         return ResponseEntity.ok(existingRecipe);
     }

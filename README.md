@@ -36,5 +36,4 @@ Macros&More is a powerful nutrition tracking app that helps users understand and
 
 ## 🖼️ Screenshots
 
-> _You can add screenshots or GIFs here for better visual impact:_
-
+![App Screenshot](https://github.com/user-attachments/assets/134b817d-6a83-4401-a15d-c14528055b80)

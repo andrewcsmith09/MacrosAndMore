@@ -78,6 +78,7 @@ Accurate data is foundational to the credibility of any health or nutrition-rela
 
 Finding a reliable food database presented a separate challenge. Many publicly available datasets lacked completeness, consistency, or came from unknown sources. After evaluating several options, I chose the USDA FoodData Central database. Maintained by a reputable government agency, it offers a comprehensive and well-documented dataset of foods, nutrients, and branded products. This choice gave me confidence in the accuracy of food entries while also improving the transparency and traceability of the data used in the app.
 
+### Full Stack Project
 ---
 
 ### 📄 License

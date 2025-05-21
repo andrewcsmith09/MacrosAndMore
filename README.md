@@ -56,7 +56,7 @@
 
 - **Frontend**: React Native (built with Expo)
 - **Backend**: Java + Spring Boot
-- **Database**: Amazon RDS (PostgreSQL)
+- **Database**: Amazon RDS (MySQL)
 - **Hosting**: EC2 instance on AWS (Amazon Linux 2023)
 
 ---
@@ -68,9 +68,9 @@ Part of the struggle when developing software that uses personal information is 
 
 One of the first steps was ensuring that data stored in the backend was handled securely. I used Spring Boot with JPA (Java Persistence API) to manage database interactions, which allowed for structured, secure, and efficient data access.
 
-Another key consideration was how to protect user accounts without creating unnecessary friction. Requiring users to log in every time they opened the app would be secure but frustrating. To strike a balance, I implemented an authentication system using access and refresh tokens. This approach allowed users to remain logged in for a set period while ensuring that sensitive endpoints were still protected by time-limited access tokens. If an access token expired, the app could securely request a new one using the refresh token — reducing friction without compromising security.
+Another key consideration was how to protect user accounts without creating unnecessary friction. Requiring users to log in every time they opened the app would be secure but frustrating. To strike a balance, I implemented an authentication system using access and refresh tokens. This approach allowed users to remain logged in for a set period while ensuring that sensitive endpoints were still protected by time-limited access tokens. If an access token expired, the app could securely request a new one using the refresh token, reducing friction without compromising security.
 
-I also made a conscious decision to limit the amount of personal information collected. Outside of food and nutrition data, only a user’s name, email, address, and password are stored. Additional health metrics such as height, weight, age, and pregnancy status are used solely for the purpose of calculating personalized nutritional goals — they are processed in-memory and never saved to the database. This approach helped reduce the app’s data privacy footprint while still delivering a personalized experience.
+I also made a conscious decision to limit the amount of personal information collected. Outside of food and nutrition data, only a user’s name, email, address, and password are stored. Additional health metrics such as height, weight, age, and pregnancy status are used solely for the purpose of calculating personalized nutritional goals, they are processed in-memory and never saved to the database. This approach helped reduce the app’s data privacy footprint while still delivering a personalized experience.
 
 ### Finding Quality Data
 
@@ -78,7 +78,14 @@ Accurate data is foundational to the credibility of any health or nutrition-rela
 
 Finding a reliable food database presented a separate challenge. Many publicly available datasets lacked completeness, consistency, or came from unknown sources. After evaluating several options, I chose the USDA FoodData Central database. Maintained by a reputable government agency, it offers a comprehensive and well-documented dataset of foods, nutrients, and branded products. This choice gave me confidence in the accuracy of food entries while also improving the transparency and traceability of the data used in the app.
 
-### Full Stack Project
+### Bringing Everything Together
+
+One of the most rewarding, and challenging, parts of the project was ensuring that all pieces of the stack worked together smoothly. Building the frontend in React Native and the backend in Spring Boot meant bridging two different ecosystems. I needed to ensure consistent data formatting, robust error handling, and secure communication between the client and server. I used tools like Postman to test endpoints, debug API issues, and validate that the backend was returning the expected data structures for integration with the mobile app.
+
+For deployment, I hosted the Spring Boot backend on an Amazon EC2 instance, using Amazon RDS to manage the MySQL database. Setting up the EC2 environment involved configuring security groups, installing necessary dependencies, and managing environment variables securely. I also configured the backend to be publicly accessible while still locking it down to only accept requests from authorized sources, like the mobile app.
+
+This phase of the project brought everything together, from API design to user authentication to data persistence, into a unified, working product. It taught me the importance of deployment planning, cross-system compatibility, and the practical challenges of launching a full-stack application in a real-world environment.
+
 ---
 
 ### 📄 License

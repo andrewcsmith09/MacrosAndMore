@@ -89,7 +89,7 @@ This phase of the project brought everything together, from API design to user a
 ---
 
 ### 📄 License
-This project is licensed under the MIT License.
+This project is licensed under a [Creative Commons Attribution-NonCommercial 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/).
 
 ---
 

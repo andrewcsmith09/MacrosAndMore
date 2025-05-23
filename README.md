@@ -1,6 +1,6 @@
 
 <p align='center'>
-   <img src="https://github.com/user-attachments/assets/fe85c273-064a-487b-9d5b-ab30007150ec" />
+   <img src="https://github.com/andrewcsmith09/MacrosAndMore/blob/master/readme_assets/longLogo.png" />
 </p>
 
 ---
@@ -20,15 +20,15 @@
 ---
 
 <p align='center'>
-   <img src="https://github.com/user-attachments/assets/51eb5860-3c77-43d0-9ad0-849601434df5" width="350" />
+   <img src="https://github.com/andrewcsmith09/MacrosAndMore/blob/master/readme_assets/Home1-portrait.png" width="350" />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   <img src="https://github.com/user-attachments/assets/9a54ac56-6d54-4912-b53c-53189d9dff74" width="350" />
+   <img src="https://github.com/andrewcsmith09/MacrosAndMore/blob/master/readme_assets/LogFood-portrait.png" width="350" />
 </p>
 
 <p align='center'>
-   <img src="https://github.com/user-attachments/assets/6143e24e-04e8-4c60-a829-2115aab57e1a" width="350" />
+   <img src="https://github.com/andrewcsmith09/MacrosAndMore/blob/master/readme_assets/FoodLog-portrait.png" width="350" />
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   <img src="https://github.com/user-attachments/assets/0d84cd9b-ab24-4248-98ce-e988826167a2" width="350" />
+   <img src="https://github.com/andrewcsmith09/MacrosAndMore/blob/master/readme_assets/NewRecipe-portrait.png" width="350" />
 </p>
 
 ---
